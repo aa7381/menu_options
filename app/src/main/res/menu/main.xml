@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuPlus"
+        android:title="Plus"
+        android:orderInCategory="100" />
+    <item
+        android:id="@+id/menuMinus"
+        android:title="minus"
+        android:orderInCategory="300" />
+    <item
+        android:id="@+id/menuKefel"
+        android:title="kefel"
+        android:orderInCategory="200" />
+    <item
+        android:id="@+id/menuHiluk"
+        android:title="hiluk"
+        android:orderInCategory="200" />
+</menu>
