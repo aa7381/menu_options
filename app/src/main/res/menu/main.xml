@@ -16,4 +16,8 @@
         android:id="@+id/menuHiluk"
         android:title="hiluk"
         android:orderInCategory="200" />
+    <item
+        android:id="@+id/menuclear"
+        android:title="Clear"
+        android:orderInCategory="300" />
 </menu>
