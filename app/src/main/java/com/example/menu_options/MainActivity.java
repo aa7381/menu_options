@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    public String bigNumSimplifier(double result) {
+        String scientificNotation = String.format("%.4e", result);
+        String[] parts = scientificNotation.split("e");
+        double base = Double.parseDouble(parts[0]) / 10.0;
+        int exponent = Integer.parseInt(parts[1]) + 1;
+        return String.format("%.4f * 10^%d", base, exponent);
+    }
     public boolean onOptionsItemSelected(MenuItem menu)
     {
         String num1 = firstnum.getText().toString();
@@ -73,8 +81,15 @@ public class MainActivity extends AppCompatActivity  {
             sum.setText("");
             return true;
         }
+        if(result >= 1000000 )
+        {
 
-        sum.setText(String.valueOf(result));
+            sum.setText(String.valueOf(bigNumSimplifier(result)));
+        }
+        else
+        {
+            sum.setText(String.valueOf(result));
+        }
         return super.onOptionsItemSelected(menu);
     }
     }
